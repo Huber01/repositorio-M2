@@ -6,17 +6,35 @@ import './Movie.css';
 
 class Movie extends React.Component {
 
-
+    componentDidMount(){
+        const movieID = this.props.match.params.id
+        this.props.getMovieDetail(movieID);// se despacha la accion, y se llena el estado de movieDetail
+    }
 
     render() {
         return (
             <div className="movie-detail">
-                Detalle de la pelicula  
+                <h1>{this.props.movie.Title}</h1>
+                <h2>{this.props.movie.Year}</h2>
+                <img src ={this.props.movie.Poster} alt='poster'/>
+                
             </div>
         );
     }
 }
 
+function mapStateToProps(state){
+    return{
+        movie:state.movieDetail
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return{
+        getMovieDetail: movieID => dispatch(getMovieDetail(movieID))
+    }
+}
 
 
-export default (Movie);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Movie);

@@ -1,6 +1,11 @@
-(function () {
+//(function () {
 
-  window.whiteboard = new window.EventEmitter();
+
+  var EE = require('./event-emitter.js')
+  //window.whiteboard = new window.EventEmitter();//  esto es un objeto creado por la funcion constructora event-emitter. 
+  //como necesita de event emitter, se lo requiere desde este archivo.
+  var whiteboard = new EE()
+  //se genera una nueva instancia de EE
 
   // Ultimately, the color of our stroke;
   var color;
@@ -113,4 +118,5 @@
 
   };
 
-})();
+  module.exports = whiteboard;
+//})();

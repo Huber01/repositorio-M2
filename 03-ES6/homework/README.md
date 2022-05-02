@@ -88,7 +88,7 @@ Hay cuatro tipos de selectores que tu función `$` puede ser capáz de matchear.
 
 #### Primeros Tests: `selectorTypeMatcher`
 
-El `selectorTypeMatcher` debería tomar un selector como string (como cualquiera de los ejemplos de arriba) y devolver one de los 4 string que representand el tipo de selector. Por ejemplo, para detectar un selector de tipo id, cheque primero si el primer caracter del selector es #. Si es asím la función debería devolver 'id'.
+El `selectorTypeMatcher` debería tomar un selector como string (como cualquiera de los ejemplos de arriba) y devolver one de los 4 string que representa el tipo de selector. Por ejemplo, para detectar un selector de tipo id, cheque primero si el primer caracter del selector es #. Si es asím la función debería devolver 'id'.
 
 **Termina escribiendo** `selectorTypeMatcher. Cuando hayas pasado los tests asociados avanza a la siguiente parte del workshop.
 
